@@ -2,7 +2,7 @@
    HERO BACKGROUND + FOG
 -------------------------------------------------- */
 body {
-  background: url('/assets/images/hero_bg.jpg') no-repeat center center fixed;
+  background: url('/assets/images/vf_hero.png') no-repeat center center fixed;
   background-size: cover;
   background-attachment: fixed;
   background-color: #0d0d0d;
