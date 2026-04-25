@@ -1,6 +1,6 @@
 title: "Village Frontier"
 description: "The Frontier Lodge — A DayZ Survival Network"
-theme: jekyll-theme-slate
+theme: null
 
 include:
   - assets/css/style.css
