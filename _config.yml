@@ -1,0 +1,13 @@
+title: "Village Frontier"
+description: "The Frontier Lodge — A DayZ Survival Network"
+theme: jekyll-theme-slate
+
+include:
+  - assets/css/style.css
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
