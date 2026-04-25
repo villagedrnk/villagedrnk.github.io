@@ -1,43 +1,13 @@
-/* Centering container */
-.vf-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-/* Emblem styling */
-.vf-emblem {
-  width: 280px;          /* Adjust size as needed */
-  max-width: 90%;
-  display: block;
-  margin-bottom: 20px;
-}
-
-/* Banner styling */
-.vf-banner {
-  width: 600px;          /* Adjust size as needed */
-  max-width: 95%;
-  display: block;
-  margin-top: 10px;
-}
-
-/* Optional: subtle glow */
-.vf-emblem,
-.vf-banner {
-  filter: drop-shadow(0 0 10px rgba(0,0,0,0.6));
-}
-/* Full hero background */
+/* --------------------------------------------------
+   HERO BACKGROUND + FOG
+-------------------------------------------------- */
 body {
   background: url('/assets/images/hero_bg.jpg') no-repeat center center fixed;
   background-size: cover;
   background-attachment: fixed;
-  background-color: #0d0d0d; /* fallback */
+  background-color: #0d0d0d;
 }
 
-/* Optional fog overlay */
 body::before {
   content: "";
   position: fixed;
@@ -49,27 +19,55 @@ body::before {
   background: radial-gradient(circle at 50% 20%, rgba(255,255,255,0.08), rgba(0,0,0,0.8));
   mix-blend-mode: screen;
   opacity: 0.35;
+  z-index: 0;
 }
-/* Ember particle container */
+
+/* --------------------------------------------------
+   CENTERED HERO CONTAINER
+-------------------------------------------------- */
 .vf-container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
   z-index: 2;
 }
 
-/* Ember layer behind emblem */
+/* --------------------------------------------------
+   EMBLEM + BANNER
+-------------------------------------------------- */
+.vf-emblem {
+  width: 280px;
+  max-width: 90%;
+  display: block;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.6));
+}
+
+.vf-banner {
+  width: 600px;
+  max-width: 95%;
+  display: block;
+  margin-top: 10px;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.6));
+}
+
+/* --------------------------------------------------
+   EMBER PARTICLES
+-------------------------------------------------- */
 .ember-layer {
   position: absolute;
-  top: -40px;
+  top: -20px;
   left: 50%;
   width: 300px;
   height: 300px;
   transform: translateX(-50%);
   pointer-events: none;
-  overflow: visible;
   z-index: 1;
 }
 
-/* Ember particle style */
 .ember {
   position: absolute;
   width: 6px;
@@ -81,7 +79,6 @@ body::before {
   opacity: 0.8;
 }
 
-/* Ember animation */
 @keyframes emberFloat {
   0% {
     transform: translateY(0) scale(1);
@@ -96,6 +93,3 @@ body::before {
     opacity: 0;
   }
 }
-
-
-
